@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>登录</title>
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<link rel="stylesheet" type="text/css" href="js/reset.css">
+</head>
+<body>
+	<!-- 头部	 -->
+	<div class="header">
+		<ul class="top">
+			<li><img src="images/logo-min.jpg"></li>
+			<li>
+				<img src="images/xiazai-min.jpg">
+			</li>
+			<li><img src="images/my-min.jpg"></li>
+		</ul>
+		<div class="renting"><a href="">首页</a>>我的>登录</div>
+	</div>
+	<ul class="idea">
+		<li class="pi">普通登录</li>
+		<li class="pi">验证码快捷登录</li>
+	</ul>
+	<div class="mima">
+		<ul class="ji">
+			<li class="about">请输入手机号码</li>
+			<li class="about">请输入密码</li>
+		</ul>
+		<div class="last">立即登录</div>
+	</div>
+	<div class="mima hide">
+		<ul class="ji">
+			<li class="about">请输入手机号码<span><a href="#" class="aa">发送验证码</a></span></li>
+			<li class="about">请输入短信中的验证码</li>
+		</ul>
+		<div class="last">验证并登录</div>
+	</div>
+	
+	<div class="mi">
+		<div class="login">立即注册</div>
+		<div class="psw">忘记密码</div>
+	</div>
+
+	<script src="js/rem.js"></script>
+	<script src="js/zepto.js"></script>
+	<script src="js/zepto.touch.js"></script>
+	<script>
+		$.each($(".pi"),function(index){
+			$(this).on("tap",function(){
+				$(".mima").eq(index).show();
+				$(".pi").eq(index).css({"border-bottom":"0.03rem solid #ff8a00"})
+				$(".mima").eq(index+1).hide();
+				$(".mima").eq(index-1).hide();
+				$(".pi").eq(index-1).css({"border-bottom":"0.03rem solid #CDCDCD"})
+			})
+		})
+		var timer=null;
+		var num=60;
+		$(".aa").on("tap",fncli = function(){
+			$(this).off('tap');
+			timer=setInterval(fn,1000);
+		})
+
+		function fn() {
+			num--;
+			if(num<=0){
+				clearInterval(timer);
+				$(".aa").text("发送验证码");
+				$(".aa").on("click",fncli);
+
+				num=60;
+			}else {
+				$(".aa").text("("+num+")重新发送");
+			}
+		}
+		$(".last").on("tap",function(){
+			clearInterval(timer);
+			$(".aa").text("发送验证码");
+			num=60;
+			$(".aa").on("click",fncli);
+		})
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="js/reset.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            font-size: 100px;
+        }
+        ul li{
+            list-style: none;
+        }
+        .header{
+            margin: 0 auto;
+            background: url(images/bg1.png) no-repeat;
+            background-size: 100%;
+            background-position:0rem 0rem;
+            width: 100%;height: 1.7rem;
+        }
+        .title{
+            color: white;
+            display: flex;
+            justify-content: flex-end;
+            text-align: center;
+            font-size: 0.16rem;
+        }
+        .title>li{
+            margin-right: 0.2rem;
+            margin-top: 0.1rem;
+        }
+        .my>ul img,.app>ul img{
+            width: 0.2rem;
+            height: 0.2rem;
+        }
+        .user{
+            width: 100%;
+        }
+        .user img{
+            display: block;
+            width: 0.52rem;
+            height: 0.52rem;
+            margin: 0 auto;
+        }
+        .dl{
+            width: 100%;
+            font-size: 0.16rem;
+            display: flex;
+            justify-content: center;
+            color: white;
+            margin-top: 0.15rem;
+        }
+        .dl>li{
+            padding: 0.06rem 0.05rem 0.06rem 0.05rem;
+            text-align: center;
+            width: 0.5rem;
+            border: 1px white solid;
+        }
+        .home{
+            width: 100%;
+            font-size: 0.16rem;
+            padding-left: 0.1rem;
+            color: gray;
+            padding-right: 0.1rem;
+            box-sizing: border-box;
+        }
+        .home li{
+            padding: 0.1rem 0rem 0.1rem 0rem;
+            display: flex;
+            align-items:center;
+            margin-top: 10px;
+            border-bottom: 0.01rem silver solid;
+        }
+        .home span{
+            margin-right: 0.1rem;
+        }
+        .house img{
+            width: 0.2rem;
+            height: 0.2rem;
+        }
+        .home a{
+            text-decoration: none;
+            color: gray;
+            margin-left: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <ul class="title">
+        <li class="my">
+            <ul>
+                <li><img src="images/urse.png" alt=""></li>
+                <li>我的</li>
+            </ul>
+        </li>
+        <li class="app">
+            <ul>
+                <li><img src="images/down.png" alt=""></li>
+                <li>App</li>
+            </ul>
+        </li>
+    </ul>
+    <ul class="user">
+        <li><img src="images/urse2.png" alt=""></li>
+    </ul>
+    <ul class="dl">
+        <li>登录</li>
+    </ul>
+</div>
+<div class="home">
+    <ul class=" house">
+        <li><span><img src="images/icon1.png" alt=""></span>我关注的房源 <a href="#" class="a"> ></a></li>
+        <li><span><img src="images/icon2.png" alt=""></span>我关注的小区 <a href="#" class="a"> ></a></li>
+        <li><span><img src="images/icon3.png" alt=""></span>我关注的新房 <a href="#" class="a"> ></a></li>
+        <li><span><img src="images/icon4.png" alt=""></span>我的看房记录 <a href="#" class="a"> ></a></li>
+    </ul>
+</div>
+
+<script src="js/rem.js"></script>
+<script src="js/zepto.js"></script>
+<script src="js/zepto.touch.js"></script>
+</body>
+</html>

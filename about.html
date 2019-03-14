@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>我关注的小区</title>
+	<link rel="stylesheet" type="text/css" href="css/about.css">
+	<link rel="stylesheet" type="text/css" href="js/reset.css">
+</head>
+<body>
+	<!-- 头部	 -->
+	<div class="header">
+		<ul class="top">
+			<li><img src="images/logo-min.jpg"></li>
+			<li>
+				<img src="images/xiazai-min.jpg">
+			</li>
+			<li><img src="images/my-min.jpg"></li>
+		</ul>
+		<div class="renting"><a href="">首页</a>>北京租房>我关注的小区</div>
+	</div>
+
+	<div class="choose">
+		<!-- <ul class="choose_1">
+			<li><img src="images/img1.png"></li>
+			<li>
+				<p class="title">辉煌国际</p>
+				<p class="price"> 昌平区-回龙观</</p>
+				<p>2007年建成</p>
+				<p class="toghter">板搭结构<span>3700元/月</span></p>
+			</li>
+		</ul> -->
+	</div>
+
+	<!-- fotter -->
+	<div class="footer">
+		<div class="found">北京找房无忧>首页</div>
+		<div class="last">
+			<ul class="last_1">
+				<li><img src="images/apple-min.png" alt=""></li>
+				<li>
+					<p>iPhone</p>
+					<p>客户端</p>
+				</li>
+			</ul>
+			<ul class="last_1">
+				<li><img src="images/android-min.png" alt=""></li>
+				<li>
+					<p>Android</p>
+					<p>客户端</p>
+				</li>
+			</ul>
+		</div>
+		<div class="banq">
+			<p>北京找房无忧房地产经纪公司</p>
+			<p>网络经营许可证京ICP备20160812号</p>
+		</div>
+	</div>
+
+	<script src="js/rem.js"></script>
+	<script src="js/zepto.js"></script>
+	<script src="js/zepto.touch.js"></script>
+	<script src="js/doT.min.js"></script>
+	<script id="dot" type="text/x-dot-template">
+		{{~it.choosable1:value:index}}
+		<ul class="choose_1">
+			<li><img src="images/{{=value[0]}}"></li>
+			<li>
+				<p class="title">{{=value[1]}}</p>
+				<p class="price"> {{=value[2]}}</</p>
+				<p>2007年建成</p>
+				<p class="toghter">{{=value[3]}}<span>{{=value[4]}}</span></p>
+			</li>
+		</ul>
+		{{~}}
+	</script>
+	<script>
+		$.ajax({
+			type:"GET",
+			dataType:"json",
+			url:"./json/abou.json",
+			success:function(one){
+				console.log(one);
+				var dom=doT.template($("#dot").text());
+                $(".choose").html(dom(one));
+			}
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑";
+}
+html,body{
+	width: 100%;
+	height: 100%;
+	font-size: 100px;
+	background: #EDECEC;
+}
+p{
+	font-size: 0.12rem;
+}
+.header{
+	width: 100%;
+	background: white;
+}
+.top{
+	width: 100%;
+	background-color: #ff8a00;
+	overflow: hidden;
+}
+.top>li:first-child{
+	width: 30%;
+	float: left;
+	margin-left: 0.35rem;
+	margin-top: 0.05rem;
+}
+
+.top>li:nth-child(3){
+	width:6%;
+	float: right;
+	margin-right: 0.3rem;
+	margin-top: 0.1rem;
+}
+.last{
+	font-size: 0.14rem;
+}
+.top>li:nth-child(2){
+	width:6%;
+	float: right;
+	margin-right: 0.2rem;
+	margin-top: 0.1rem;
+}
+.top>li>img{
+	width:100%;
+}
+.renting{
+	display: inline-block;
+	font-size: 0.12rem;
+	padding: 0.1rem;
+}
+.banner{
+	width: 100%;
+	height: 1.85rem;
+	background:url(../images/bg1.png);
+	background-size: 100%;
+	color: white;
+	text-align: center;
+}
+.banner>div{
+	width: 30%;
+	margin:0 auto;
+	padding-top: 0.2rem;
+}
+.banner>div>img{
+	width: 100%;
+}
+.banner>p{
+	margin-top: 0.3rem;
+}
+.ji{
+	width: 100%;
+	background: white;
+	font-size: 0.12rem;
+	border-bottom:0.01rem solid #CDCDCD;
+}
+.about{
+	width: 90%;
+	margin:0 auto;
+	padding: 0.1rem 0rem;
+	overflow: hidden;
+	text-indent: 1em;
+	border-bottom:0.01rem solid #CDCDCD;
+}
+.about>span{
+	display: inline-block;
+	width: 3%;
+	float: right;
+	margin-right: 0.25rem;
+}
+.about>span>img{
+	width: 100%;
+}
+.ji>li:last-child{
+	border: none;
+}
+.last{
+	width: 90%;
+	margin:0 auto;
+	background: white;
+	color: #ff8a00;
+	text-align: center;
+	margin-top: 0.3rem;
+	padding:0.1rem;
+	border: 0.01rem solid #CDCDCD;
+	margin-bottom: 0.75rem;
+}
